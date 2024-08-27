@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/battleship_class.hpp
+iostream
+-
+
+../include/scoped_ptr.hpp
+assert.h
+-
+
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/include/battleship_class.cpp
+battleship_class.hpp
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/include/battleship_class.hpp
+carrier_class.hpp
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/include/carrier_class.hpp
+destroyer_class.hpp
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/include/destroyer_class.hpp
+
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/include/battleship_class.hpp
+iostream
+-
+
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/include/carrier_class.hpp
+battleship_class.hpp
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/include/battleship_class.hpp
+
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/include/destroyer_class.hpp
+battleship_class.hpp
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/include/battleship_class.hpp
+
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/src/factory_study.cpp
+battleship_class.hpp
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/src/battleship_class.hpp
+scoped_ptr.hpp
+/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/src/scoped_ptr.hpp
+
