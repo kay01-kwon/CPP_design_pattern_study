@@ -1,3 +1,0 @@
-/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/build/CMakeFiles/rebuild_cache.dir
-/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/build/CMakeFiles/edit_cache.dir
-/home/kay/Documents/cpp_test/Design_pattern_study/factory_study/build/CMakeFiles/factory_study.dir
