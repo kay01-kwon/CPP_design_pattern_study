@@ -1,7 +1,13 @@
 #include <iostream>
+#include <string>
+#include <vector>
+
 
 using std::cout;
 using std::endl;
+
+using std::string;
+using std::vector;
 
 class Logger{
 
@@ -13,12 +19,28 @@ class Logger{
 
     static Logger* getInstance()
     {
+        if(s_logger_instance == nullptr)
+        {
+            s_logger_instance = new Logger();
+        }
         return s_logger_instance;
     }
 
-    void printLogMessage()
+    void printLogMessages()
     {
-        cout << "This is a log message " << endl;
+        cout << "Accessing the messages: "<< endl;
+
+        for(auto& message : m_messages)
+        {
+            cout << message << endl;
+        }
+    }
+
+    void addMessage(const string& message)
+    {
+
+        m_messages.push_back(message);
+
     }
 
     private:
@@ -35,6 +57,8 @@ class Logger{
 
     static Logger* s_logger_instance;
 
+    vector<string> m_messages;
+
 };
 
 // Initialize the static logger instance
@@ -43,7 +67,10 @@ Logger* Logger::s_logger_instance = nullptr;
 int main()
 {
     Logger* logger  = Logger::getInstance();
-    logger->printLogMessage();
+    Logger::getInstance()->addMessage("First message");
+    logger->addMessage("Second message");
+
+    logger->printLogMessages();
 
 
     return 0;
