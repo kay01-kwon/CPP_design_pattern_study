@@ -70,6 +70,5 @@ int main()
     Logger::getInstance().addMessage("Third message");
     Logger::getInstance().printLogMessages();
 
-
     return 0;
 }
