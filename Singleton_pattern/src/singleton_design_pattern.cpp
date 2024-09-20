@@ -11,13 +11,21 @@ class Logger{
     // created, and we will enforce only one instance
     // objects get created in our code logic
 
+    static Logger* getInstance()
+    {
+        return s_logger_instance;
+    }
 
-    // private:
+    void printLogMessage()
+    {
+        cout << "This is a log message " << endl;
+    }
+
+    private:
     
     Logger()
     {
-        cout << "Logger was created " << numberOfLoggers << endl;
-        numberOfLoggers++;
+        cout << "Logger was created " << endl;
     }
 
     ~Logger()
@@ -25,20 +33,17 @@ class Logger{
         cout << "Logger was destroyed" << endl;
     }
 
-    static int numberOfLoggers;
+    static Logger* s_logger_instance;
 
 };
 
-// Initialize the static number of loggers
-int Logger::numberOfLoggers = 0;
+// Initialize the static logger instance
+Logger* Logger::s_logger_instance = nullptr;
 
 int main()
 {
-    Logger logger1;
-    Logger logger2;
-    Logger logger3;
-    Logger logger4;
-    
+    Logger* logger  = Logger::getInstance();
+    logger->printLogMessage();
 
 
     return 0;
