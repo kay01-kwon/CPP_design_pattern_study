@@ -3,6 +3,12 @@
 using std::cout;
 using std::endl;
 
+enum class GameObjectType
+{
+    Plane,
+    Boat
+};
+
 class IGameObject{
 
     public:
@@ -44,6 +50,20 @@ class Boat : public IGameObject{
         {
 
         }
+};
+
+IGameObject* CreateGameObjectFactory(GameObjectType type)
+{
+    switch(type)
+    {
+        case GameObjectType::Plane:
+            return new Plane();
+        case GameObjectType::Boat:
+            return new Boat();
+
+        default:
+            return nullptr;
+    }
 };
 
 int main()
