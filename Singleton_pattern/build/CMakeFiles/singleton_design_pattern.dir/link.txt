@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/singleton_design_pattern.dir/src/singleton_design_pattern.cpp.o  -o singleton_design_pattern 
