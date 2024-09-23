@@ -70,5 +70,10 @@ int main()
     Logger::getInstance().addMessage("Third message");
     Logger::getInstance().printLogMessages();
 
+    int *x = new int(10);
+
+    delete x;
+    
+
     return 0;
 }

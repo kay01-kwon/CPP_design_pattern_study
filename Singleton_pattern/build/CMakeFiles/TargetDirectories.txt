@@ -1,0 +1,3 @@
+/home/kay/Documents/cpp_test/Design_pattern_study/Singleton_pattern/build/CMakeFiles/rebuild_cache.dir
+/home/kay/Documents/cpp_test/Design_pattern_study/Singleton_pattern/build/CMakeFiles/edit_cache.dir
+/home/kay/Documents/cpp_test/Design_pattern_study/Singleton_pattern/build/CMakeFiles/singleton_design_pattern.dir
