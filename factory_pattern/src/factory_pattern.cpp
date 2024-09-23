@@ -1,7 +1,11 @@
 #include <iostream>
+#include <memory>
 
 using std::cout;
 using std::endl;
+
+using std::unique_ptr;
+using std::make_unique;
 
 enum class GameObjectType
 {
@@ -52,15 +56,14 @@ class Boat : public IGameObject{
         }
 };
 
-IGameObject* CreateGameObjectFactory(GameObjectType type)
+unique_ptr<IGameObject> CreateGameObjectFactory(GameObjectType type)
 {
     switch(type)
     {
         case GameObjectType::Plane:
-            return new Plane();
+            return make_unique<Plane>();
         case GameObjectType::Boat:
-            return new Boat();
-
+            return make_unique<Boat>();
         default:
             return nullptr;
     }
@@ -68,6 +71,9 @@ IGameObject* CreateGameObjectFactory(GameObjectType type)
 
 int main()
 {
+    unique_ptr<IGameObject> plane = CreateGameObjectFactory(GameObjectType::Plane);
+
+    unique_ptr<IGameObject> boat = CreateGameObjectFactory(GameObjectType::Boat);
 
 
     return 0;
