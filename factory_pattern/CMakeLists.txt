@@ -4,3 +4,5 @@ project(factory_pattern)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(factory_pattern src/factory_pattern.cpp)
+
+add_executable(factory_pattern2 src/factory_pattern2.cpp)

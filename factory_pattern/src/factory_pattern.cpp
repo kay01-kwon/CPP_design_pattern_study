@@ -72,7 +72,6 @@ unique_ptr<IGameObject> CreateGameObjectFactory(GameObjectType type)
 int main()
 {
     unique_ptr<IGameObject> plane = CreateGameObjectFactory(GameObjectType::Plane);
-
     unique_ptr<IGameObject> boat = CreateGameObjectFactory(GameObjectType::Boat);
 
 
